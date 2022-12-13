@@ -8,7 +8,7 @@ void exc1();
 void exc2();
 
 int main()
-{
+{       //Вибір завдання
     cout << "What exercise do you want to see?\n";
     cout << "1 = First exercise, 2 = Second exercise, 0 = exit\n";
 
@@ -31,11 +31,11 @@ int main()
         }
     }
 }
-
+//Перше завдання
 void exc1() {
     const int n = 10;
     double mass[n];
-    cout << "Enter the massive" << endl;
+    cout << "Enter the massive" << endl;//Введення чисел масиву
     for (int i = 0; i < n; i++)
     {
         cin >> mass[i];
@@ -49,10 +49,10 @@ void exc1() {
             k++;
         }
     if (k == 0) {
-        cout << endl << "There are no positive values";
+        cout << endl << "There are no positive values";//Якщо немає додатних елементів
     }
     else
-        cout << "Answer \n" << b;
+        cout << "Answer \n" << b;//Відповідь
 };
 
 void exc2() {
@@ -60,7 +60,7 @@ void exc2() {
     const int n = 10;
     int k1 = 0;
     double mass[n];
-    cout << "Enter massive" << endl;
+    cout << "Enter massive" << endl;//Введення чисел масиву
     for (int i = 0; i < n; i++)
     {
         cin >> mass[i];
@@ -79,11 +79,12 @@ void exc2() {
         sum += mass[i];
     }
     if (k2 == 0) {
-        cout << endl << "There are no minimal value";
+        cout << endl << "There are no minimal value";//Якщо немає мінімального елементу
         return;
     }
 
-    cout << "Answer \n" << sum << endl;
+    cout << "Answer \n" << sum << endl;//Відповідь
+    //Сортування масиву 
     for (int i = 0; i < n; i += 2) {
         for (int j = 0; j < n - 1; j++) {
             if (mass[j] > mass[j + 1]) {
@@ -93,7 +94,7 @@ void exc2() {
             }
         }
     }
-
+      //Сортування масиву за парними
     for (int i = 0; i < n; i = i + 2) {
         k1++;
     }
@@ -107,6 +108,7 @@ void exc2() {
         cout << sorted1[i] << " ";
     }
     delete[] sorted1;
+    //Сортування масиву за непарними
     k1 = 0;
     for (int i = 1; i < n; i = i + 2) {
         k1++;
